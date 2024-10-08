@@ -98,5 +98,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## 👤 Author
 
-**Divyanshu** - [Your GitHub Profile](https://github.com/yourusername)
+   **Divyanshu** - [Your GitHub Profile](https://github.com/dsthakur402)
 
