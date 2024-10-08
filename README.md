@@ -1,33 +1,102 @@
-[![progress-banner](https://backend.codecrafters.io/progress/redis/60df0834-0364-4200-9fff-468eb5f0b70e)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# Custom Redis Server
 
-This is a starting point for JavaScript solutions to the
-["Build Your Own Redis" Challenge](https://codecrafters.io/challenges/redis).
+A custom implementation of a Redis server built from the ground up. This project is a TCP server that handles core Redis functionalities such as basic command handling, RDB file persistence, replication, transactions, and streams. It's designed to be a minimal yet scalable solution for handling Redis-like operations.
 
-In this challenge, you'll build a toy Redis clone that's capable of handling
-basic commands like `PING`, `SET` and `GET`. Along the way we'll learn about
-event loops, the Redis protocol and more.
+## 🚀 Features
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+- **Basic Commands**: Supports PING, ECHO, SET & GET operations.
+- **Client Concurrency**: Handles multiple clients simultaneously with efficient concurrency management.
+- **Key Expiry**: Implements key expiry mechanism for automatic data expiration.
+- **RDB Persistence**: Reads and writes RDB files to persist data efficiently.
+- **Replication (In Progress)**: Adding support for replication across multiple Redis instances.
+- **Transactions (In Progress)**: Implementing transaction support for atomic command execution.
+- **Streams (In Progress)**: Building stream features for continuous data handling.
 
-# Passing the first stage
+## 📂 Project Structure
 
-The entry point for your Redis implementation is in `app/main.js`. Study and
-uncomment the relevant code, and push your changes to pass the first stage:
+```bash
+.
+├── app
+│   ├── main.js            # Main server logic
+│   ├── commands           # Redis commands implementations (PING, SET, GET, etc.)
+│   ├── rdb                # RDB persistence handling
+│   └── utils              # Helper functions for server and protocol handling
+├── tests
+│   └── test_suite.js      # Unit tests for command processing and persistence
+├── README.md              # Project documentation
+└── package.json           # Project dependencies and scripts
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
+
 ```
+## 🛠️ Getting Started
 
-That's all!
+### Prerequisites
 
-# Stage 2 & beyond
+- **Node.js**: Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+- **Git**: Version control system to clone this repository.
 
-Note: This section is for stages 2 and beyond.
+### Installation & Setup
 
-1. Ensure you have `node (21)` installed locally
-1. Run `./your_program.sh` to run your Redis server, which is implemented in
-   `app/main.js`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/redis-server.git
+   ```
+2. Navigate to the project directory:
+
+   ```bash
+   cd redis-server
+   ```
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+4. Run the Redis server:
+
+   ```bash
+   node app/main.js
+   ```
+## 🚦 Usage
+
+**PING:**
+
+```bash
+redis-cli PING
+```
+Output: `PONG`
+
+**SET & GET:**
+
+```bash
+redis-cli SET key "value"
+redis-cli GET key
+```
+Output: `"value"`
+
+**ECHO:**
+```bash
+redis-cli ECHO "Hello, Redis!"
+```
+Output: `"Hello, Redis"!`
+
+## 🗂️ RDB Persistence
+The Redis server supports RDB persistence for saving data to disk. It reads keys, string values, and handles key expiry from an RDB file, ensuring data recovery after a restart.
+
+## 🌟 Completed Stages
+
+- Bound to port for client connections
+- Responded to PING and multiple PINGs
+- Implemented ECHO, SET, and GET commands
+- Handled concurrent clients
+- Added expiry functionality for keys
+- RDB persistence: Configured RDB, read keys/values, and handled key expiry
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## 👤 Author
+
+**Divyanshu** - [Your GitHub Profile](https://github.com/yourusername)
+
