@@ -13,18 +13,19 @@ A custom implementation of a Redis server built from the ground up. This project
 - **Streams (In Progress)**: Building stream features for continuous data handling.
 
 ## 📂 Project Structure
-
 ```bash
 .
 ├── app
+│   ├── consts.js          # Constant values used across the app
 │   ├── main.js            # Main server logic
-│   ├── commands           # Redis commands implementations (PING, SET, GET, etc.)
-│   ├── rdb                # RDB persistence handling
-│   └── utils              # Helper functions for server and protocol handling
-├── tests
-│   └── test_suite.js      # Unit tests for command processing and persistence
+│   ├── parseRDB.js        # RDB persistence handling
+├── .gitattributes         # Git configuration for attributes
+├── .gitignore             # Git configuration to ignore specific files
+├── codecrafters.yml       # Codecrafters challenge configuration
+├── package-lock.json      # Auto-generated lock file for dependencies
+├── package.json           # Project dependencies and scripts
 ├── README.md              # Project documentation
-└── package.json           # Project dependencies and scripts
+└── your_program.sh        # Shell script to run the program
 
 
 ```
