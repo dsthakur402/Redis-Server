@@ -16,16 +16,12 @@ A custom implementation of a Redis server built from the ground up. This project
 ```bash
 .
 ├── app
-│   ├── consts.js          # Constant values used across the app
 │   ├── main.js            # Main server logic
-│   ├── parseRDB.js        # RDB persistence handling
 ├── .gitattributes         # Git configuration for attributes
 ├── .gitignore             # Git configuration to ignore specific files
-├── codecrafters.yml       # Codecrafters challenge configuration
 ├── package-lock.json      # Auto-generated lock file for dependencies
 ├── package.json           # Project dependencies and scripts
-├── README.md              # Project documentation
-└── your_program.sh        # Shell script to run the program
+└── README.md              # Project documentation
 
 
 ```
